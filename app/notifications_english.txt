@@ -1,0 +1,5 @@
+New version of Steam Switcher (01.09.2022)
+
+ver: 1.0.0.3
+Minor edits in the design.
+Adding new features.
