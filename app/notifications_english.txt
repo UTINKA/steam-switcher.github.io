@@ -1,4 +1,4 @@
-New version of Steam Switcher (01.01.2023)
+New version of Steam Switcher (03.01.2023)
 
 ver: 1.0.0.4
 Fixing a bug with the screen scale
