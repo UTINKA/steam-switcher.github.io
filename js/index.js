@@ -18,6 +18,57 @@
 		
 		SelectedColorUI = RandomInteger(0, 5);
 		UpdateUIColors();
+		
+		// images header
+		$('.content .header .box_info .hbox .image').find('img').each(function(e)
+		{
+			var img = $(this);
+			var imgID = img.attr('class');
+			var ID = new String(imgID);
+			ID = parseInt(ID.substring(4,ID.length));
+			//
+			if(SelectedColorUI == ID)
+			{
+				var CopyCSS = Array(2);
+				CopyCSS[0] = img.css('margin');
+				CopyCSS[1] = img.css('z-index');
+				//
+				img.css({
+					'margin': '0',
+					'z-index' : '6'
+				});
+				//
+				$('.content .header .box_info .hbox .image').find('.img_0').css({
+					'margin': CopyCSS[0],
+					'z-index' : CopyCSS[1]
+				});
+			}
+		});
+		// images customize
+		$('.content .box .block .customization_imgs').find('img').each(function(e)
+		{
+			var img = $(this);
+			var imgID = img.attr('class');
+			var ID = new String(imgID);
+			ID = parseInt(ID.substring(4,ID.length));
+			//
+			if(SelectedColorUI == ID)
+			{
+				var CopyCSS = Array(2);
+				CopyCSS[0] = img.css('margin');
+				CopyCSS[1] = img.css('z-index');
+				//
+				img.css({
+					'margin': '0',
+					'z-index' : '6'
+				});
+				//
+				$('.content .box .block .customization_imgs').find('.img_0').css({
+					'margin': CopyCSS[0],
+					'z-index' : CopyCSS[1]
+				});
+			}
+		});
 	});
 	
 	$(window).scroll(function()
@@ -162,57 +213,6 @@
 			$('.content .box[page=news] .block text').css('background', ColorHEX);
 			//$('.content .box[page=news] .block text .n_line').css('background', ColorHEX);
 		}
-		//
-		// images header
-		$('.content .header .box_info .hbox .image').find('img').each(function(e)
-		{
-			var img = $(this);
-			var imgID = img.attr('class');
-			var ID = new String(imgID);
-			ID = parseInt(ID.substring(4,ID.length));
-			//
-			if(SelectedColorUI == ID)
-			{
-				var CopyCSS = Array(2);
-				CopyCSS[0] = img.css('margin');
-				CopyCSS[1] = img.css('z-index');
-				//
-				img.css({
-					'margin': '0',
-					'z-index' : '6'
-				});
-				//
-				$('.content .header .box_info .hbox .image').find('.img_0').css({
-					'margin': CopyCSS[0],
-					'z-index' : CopyCSS[1]
-				});
-			}
-		});
-		// images customize
-		$('.content .box .block .customization_imgs').find('img').each(function(e)
-		{
-			var img = $(this);
-			var imgID = img.attr('class');
-			var ID = new String(imgID);
-			ID = parseInt(ID.substring(4,ID.length));
-			//
-			if(SelectedColorUI == ID)
-			{
-				var CopyCSS = Array(2);
-				CopyCSS[0] = img.css('margin');
-				CopyCSS[1] = img.css('z-index');
-				//
-				img.css({
-					'margin': '0',
-					'z-index' : '6'
-				});
-				//
-				$('.content .box .block .customization_imgs').find('.img_0').css({
-					'margin': CopyCSS[0],
-					'z-index' : CopyCSS[1]
-				});
-			}
-		});
 	}
 	
 	function SetLanguage(lang = 'english')
