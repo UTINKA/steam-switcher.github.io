@@ -339,7 +339,7 @@ html, body{
 .content .box[page=news] label{
 	text-align: left;
     display: block;
-    padding: 20px;
+    padding: 20px 0;
     margin-top: 250px;
     font-size: calc(var(--fontSize) * 2);
     font-weight: bold;

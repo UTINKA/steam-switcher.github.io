@@ -211,7 +211,7 @@
 		else if($('.content .box').attr('page') == 'news')
 		{
 			$('.content .box[page=news] .block text').css('background', ColorHEX);
-			//$('.content .box[page=news] .block text .n_line').css('background', ColorHEX);
+			//$('.content .box[page=news] label').css('color', ColorHEX);
 		}
 	}
 	
@@ -234,6 +234,7 @@
 			$('.content .box .block .customize_as_you_like').text('Customize as you like');
 			$('.content .box .liked').text('Liked?');
 			$('.content .box .block .download_and_enjoy').text('Download and enjoy!');
+			$('.content .box[page=news] label').text('news');
 			// Header img
 			$('.content .header .box_info .hbox .image .app_images').find('img').each(function(e)
 			{
@@ -280,6 +281,7 @@
 			$('.content .box .block .customize_as_you_like').text('Настраивай как тебе понравится');
 			$('.content .box .liked').text('Понравилось?');
 			$('.content .box .block .download_and_enjoy').text('Скачивай и наслаждайся!');
+			$('.content .box[page=news] label').text('новости');
 			// Header img
 			$('.content .header .box_info .hbox .image .app_images').find('img').each(function(e)
 			{
